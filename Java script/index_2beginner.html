@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Document</title>
+    <script defer src="js/first.js"></script>
+    <!-- ch 53 Get Computed CSS -->
+        <style>
+            /* #get{
+                background-color: cyan;
+                color: rgb(189, 71, 71);
+            } */
+
+    /* ch 54 Css Classes */
+            .color{
+                background-color: blue;
+                color: white;
+            }
+            .dim{
+                border: 2px solid tomato;
+                padding: 100px;
+            }
+    /* ch 61 scroll events */
+            /* body{
+                height: 1000px;
+            } */
+    /*  ch 63 Event bubbling and Event Capturing */
+            body{
+                background-color: chartreuse;
+                padding: 100px;
+            }
+            #mydiv{
+                background-color: crimson;
+                padding: 50px;
+            }
+        </style>
+</head>
+<body>
+    <!-- Ch 51 and 52 change attributes and Inline style -->
+        <button id= "btn" name="form">login</button>
+        <br>
+    <!-- if we are using inline styling the use operator (+=)eg -->
+        <!-- <button id= "operator" style = 'color: blueviolet; background-color: crimson;'>login</button> -->
+    <!-- ch 53 Get computed CSS -->
+        <button id= "get" name="form">login</button>
+    <!-- ch 54 CSS Classes -->
+        <div id='box' class = 'color dim'>
+            <p>This is a p tag.</p>
+        </div>
+    <!-- ch 56 Dom Events in JS. -->
+        <button onclick='btnclick()'>sign up</button>
+        <button id="push" >sign up</button>
+    <!-- ch 57 Remove Event listner in js. -->
+        <button id="clicked" >Options</button>
+        <br><br><hr>
+    <!-- ch 58 Page load events -->
+        <img width='500' src="images/download.jpeg">
+        <img id='img' width='500' src="images/download (1).jpeg" alt="">
+
+    <!-- ch 62 Input event  -->
+        <form action="">
+            <input type="text" id='input'>
+        </form>
+    <!-- ch 63 Event bubbling and Event Capturing -->
+        <div id="mydiv">
+            <button id="btn1">click me</button>
+        </div>
+    <!-- ch 64 Prevent default in js -->
+        <a href="https://www.google.com" id="anchor">click Me</a>
+
+        <form action="" id='myform'>
+            <input type="text">
+            <input type="submit">
+        </form>
+    <!-- ch 66 window object in js -->
+        <button id='clk1'>amazon</button>
+        <button id='clk2'>flipkart</button>
+        <button id='clk3'>close</button>
+
+    <!-- ch 67 Time out and Time interval -->
+        <button id='stop'>clear</button>
+    <script>
+        // ch 51 change attributes
+            /*
+            let btn = document.getElementById("btn");
+            //btn.setAttribute("name","form1");
+
+        // if we have to find value of any attributes in prog
+            let val = btn.getAttribute("name");
+            console.log(val);
+        // if we have to "remove" the attributes 
+            //let remove = btn.removeAttribute('name');
+        // how to check or find attributes in js.
+            let check = btn.hasAttribute("id");
+            console.log(check);*/
+
+        // ch 52 inline style
+            //let btn = document.getElementById("btn");
+            //btn.style.cssText = 'background-color: black; color: white;';
+            // another method
+            //btn.setAttribute('style', 'color: black; background-color: skyblue;');
+            // one more method 
+            // btn.style.color = "yellow";
+            // btn.style.backgroundColor = 'grey';
+
+        //if we are using inline styling the use operator (+=)eg
+            // let operator = document.getElementById("operator");
+            // operator.style.cssText += 'border: 2px solid black;';
+
+        // ch 53 Get Computted CSS
+            // let get = document.getElementById("get");
+            // let css = getComputedStyle(get);
+            // console.log(css);
+            // console.log(css.color);
+
+        // ch 54 CSS Class
+        /*
+            let box = document.getElementById('box');
+            // console.log(box.className);
+            // box.className += 'dim'// This is method to add 'dim' attribute in class
+            // console.log(box.classList);
+            for(let css of box.classList){
+                console.log(css);
+            }
+        // another method to add attributes in class
+            box.classList.add('list');
+        // we can reomove attribute in class
+            box.classList.remove('list');
+        // we can also replace attribute in class
+            box.classList.replace('dim','list');
+        // toggler = if there is attribute is there then toggler remove that attribute and if there is not any attribute then toggler add the attribute in js Eg:-
+            box.classList.toggle('color');*/
+
+        //  ch 56 Dom Events in JS.
+            /*
+            function btnclick(){
+                alert("button was clicked");
+            }
+        // 2nd method
+            // let btn = document.getElementById("push");
+            // btn.addEventListener("click",btnclick);
+        // 3rd method we can use anonymous function
+            // let btn = document.getElementById("push");
+            // btn.addEventListener('click', function(){
+            //     alert("click is activated");
+            // });
+        // Other functions
+            let btn = document.getElementById("push");
+            btn.addEventListener('mouseover', function(){
+                console.log('mouseover is activated');
+            });
+            btn.addEventListener('mouseout', function(){
+                console.log('mouseout is activated');
+            });*/
+
+        // ch 57 Remove Event listner in js.
+        /*
+            let btn = document.getElementById('clicked');
+            function click1(){
+                console.log('click1 activated');
+            }
+            function click2(){
+                console.log('click2 activated');
+            }
+            btn.addEventListener('click',click1);
+            btn.addEventListener('click',click2);
+
+            btn.removeEventListener('click', click2);*/
+
+        // ch 58 Page load events
+            /*
+            window.addEventListener("DOMContentLoaded",function(){
+                console.log('DOM tree created');
+            });
+            window.addEventListener("load",function(){
+                console.log('Fully loaded');
+            });
+        // we can also put 'load' Event on particular element for eg;
+            // let img = document.getElementById("img");
+            // img.addEventListener('load',function(){
+            //     console.log('Fully loaded');
+            // });*/
+
+        // ch 60 key down events
+            /*
+            window.addEventListener('keydown', checkkey);
+            function checkkey(event){
+                console.log(event.key);
+            }*/
+
+        // ch 61 Scroll Events
+            /*
+            window.addEventListener('scroll', function(){
+                console.log("scrollin...");
+            });*/
+            /*
+            window.addEventListener('wheel', function(event){
+                if(event.deltaY < 0){
+                    console.log('scrolling up..');
+                }
+                else{
+                    console.log("scrolling down..")
+                }
+            });*/
+            /*
+            window.addEventListener('scroll', function(){
+                if(window.pageYOffset > 200){
+                    document.body.style.backgroundColor= 'yellow';
+                }
+                else {
+                    document.body.style.backgroundColor= 'green';
+                }
+            });*/
+
+        // ch 62 Input event
+            /*
+            let x = document.getElementById('input');
+            x.addEventListener('focus', focused);
+            x.addEventListener('blur', blured);
+
+            function focused(){
+                x.style.backgroundColor= 'aqua';
+            }
+
+            function blured(){
+                x.style.backgroundColor= 'lightgreen';
+            }
+
+            // x.addEventListener('change', function(){
+            //     console.log(this.value);
+            // });
+            x.addEventListener('input', function(){
+                console.log(this.value);
+            });*/
+
+        // ch 63 Event bubbling and Event capturing
+            /*
+            let d = document.getElementById("mydiv");
+            let b = document.getElementById("btn1");
+            
+            b.addEventListener('click',btnclicked);// by default there is false
+            d.addEventListener('click',divclicked, true);// by default there is false
+            document.body.addEventListener('click', bodyclicked, true);// by default there is false
+
+            function btnclicked(){
+                console.log("button clicked...")
+            }
+            function divclicked(){
+                console.log("div clicked...")
+            }
+            function bodyclicked(){
+                console.log("body clicked...")
+            }*/
+
+        // ch 64 Prevent default in js
+            /*
+            let link = document.getElementById('anchor');
+            link.addEventListener('click',function(e){
+                console.log("link clicked..");
+                //e.preventDefault();
+            });     
+            
+        // one more example
+            let form = document.getElementById('myform');
+            form.addEventListener('click', function(e){
+               // e.preventDefault();
+            });*/
+
+        // ch 66 window object in js
+            /*
+            let clk = document.getElementById('clk1')
+            let url = 'https:www.amazon.com';
+            let Feature = "height=500, width=500";
+
+            clk.addEventListener('click', function(){
+                window.open(url,'Google', Feature);
+            });*/
+        // if we have to open or close the web page in js
+            /*
+            let clk = document.getElementById('clk1')
+            let clk2 = document.getElementById("clk2");// if we have to open other web page on the same page we created obove.
+            let clk3 = document.getElementById('clk3');// close program in js
+
+            let url = 'https:www.amazon.com';
+            let Feature = "height=500, width=500";
+            let win;
+
+            clk.addEventListener('click', function(){
+                win = window.open(url,'google', Feature);  // if we have to use 'close' function then we have to make these line in to a 'var'.
+            });
+
+            clk2.addEventListener('click', function(){
+                window.open('https://www.flipkart.com','google', 'height=800, width=800');
+            });
+
+            clk3.addEventListener('click', function(){
+                win.close();
+            });*/
+            
+        // ch 67 Time out and Time Interval
+            /*
+            setInterval(myfunction, 5000);
+            function myfunction(){
+                console.log('hello everyone');
+            }*/
+
+            // if we have to stop the "set interaval" time
+                /*
+                var clear = setInterval(fun,2000);
+
+                function fun(){
+                    console.log('please subscribe');
+                }
+                
+                let interval = document.getElementById("stop");
+                interval.addEventListener('click', function(){
+                    clearInterval(clear);
+                });*/
+    </script>   
+</body>
+</html>

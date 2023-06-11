@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Document</title>
+    <script defer src="js/first.js"></script>
+    
+</head>
+<body>
+    <!-- <h1 id="h">JS Tutorial</h1> -->
+    <!-- <script>
+        alert("hello world...");
+    </script> -->
+    <!-- <script src="js/first.js"></script> -->
+    <script src="js/script.js"></script>
+
+    <!-- Ch 39, 40 and 41  ID, Class and tag Elements selectors -->
+    <ul>
+        <li class="cl">list 1</li>
+        <li id = "first">list 2</li>
+        <li class="cl">list 3</li>
+    </ul>
+
+    <!-- <h2>heading 1</h2>
+    <div id ="div1">
+        <p>paragraph 1</p>
+        <h2>heading 2</h2>
+        <p>paragraph 2</p>
+        <h2>heading 3</h2>
+        <p>paragraph 3</p>
+    </div> -->
+            <!-- Ch 42 Query selector -->
+
+    <h2 class = "query">heading 1</h2>
+    <div id ="div1">
+        <p class = "query">paragraph 1</p>
+        <h2 class = "query">heading 2</h2>
+        <p>paragraph 2</p>
+        <h2>heading 3</h2>
+        <p class = "query">paragraph 3</p>
+    </div>
+    
+    
+    <script>
+        // let elm = document.getElementById("first");
+        
+        // console.log(elm.innerHTML);// get method
+        // elm.innerHTML = '<p> hello every one </p>' // set method
+        // console.log(elm);
+
+
+        //let elm = document.getElementsByClassName("cl");
+        //console.log(elm);
+        /*
+        for(let i = 0; i < elm.length; i++){
+            elm[i].innerHTML = "<p> good morning </p>"; 
+        }*/
+
+    // how to change tag elements in js.
+        /*
+        let div = document.getElementsByTagName("div1");
+        let elm = div1.getElementsByTagName("h2");*/
+
+    // ch 42 how to use query selector in js
+        /*
+        let elm = document.querySelector("p.query");
+        elm.innerHTML = '<p> hello every one </p>'
+        console.log(elm);*/
+        /*
+        let elm = document.querySelectorAll("p.query");
+
+        for (let i=0; i < elm.length; i++){
+            elm[i].innerHTML = "morning";
+        } */         
+    </script>
+</body>
+<body>
+    <!-- Ch 43 Traversing Element -->
+    <!-- How we can select parent, child and sibling in these program -->
+        <ul id = "traver1">
+            <li id="traver">list 1</li>
+            <li id="traver3">list 2</li>
+            <li>list 3</li>
+        </ul>
+        <ul>
+            <li>list a</li>
+            <li>list b</li>
+            <li>list c</li>
+        </ul>
+
+    <!-- Ch 44 change HTML with java script -->
+        <!-- <div id = "change">
+            <p>Hello this is a tag. </p>
+        </div> -->
+
+    <!-- CH 45 create and append -->
+        <div id= "change">
+            <p id="p1">hello this is a p tag.</p>
+        </div>
+    <!-- one more example -->
+        <ul id="list">
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </ul>
+    <!-- Ch 46 Insert before element -->
+        <!-- <ul id = "insert">
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+            <li>list 4</li>
+        </ul> -->
+    <!-- ch 47 Remove child Element -->
+        <!-- <ul id="menu">
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contact Us</li>
+        </ul> -->
+    <!-- Ch 48 clone or Copy Element -->
+            <ul id="menu">
+                <li>Home</li>
+                <li>Service</li>
+                <li>Contact Us</li>
+                <li>services</li>
+            </ul>   
+    <!-- Ch 49 Replace element in js -->
+            <ul id="replace">
+                <li>Home</li>
+                <li>Contact Us</li>
+                <li>Services</li>
+            </ul>   
+
+    <!-- CH 50 Insert Adjacent HTML -->
+
+            <div id= "insert"> hello
+                <h1>INDIA WON THE MATCH BY 5 WICKETS</h1>
+                <p>This is a p Tag.</p>
+            </div>
+
+
+            <form name="selectForm">
+                <p>
+                  <label for="musicTypes">Choose some music types, then click the button below:</label>
+                  <select id="musicTypes" name="musicTypes" multiple="multiple">
+                    <option selected="selected">R&B</option>
+                    <option>Jazz</option>
+                    <option>Blues</option>
+                    <option>New Age</option>
+                    <option>Classical</option>
+                    <option>Opera</option>
+                  </select>
+                </p>
+                <p><input id="btn" type="button" value="How many are selected?" /></p>
+              </form>
+
+
+    <script>
+    
+        // ch 43 traversing Element
+
+        // these is a method to select parent.
+            /*
+            let doc = document.getElementById('traver'); 
+            let prt = doc.parentElement;
+            console.log(prt);
+            */
+
+         // these is a method to select child.
+            /*
+            let doc = document.getElementById("traver1");
+            //let child = doc.firstElementChild;// first children will be selected
+            //let child = doc.lastElementChild; // last children will be selected
+            let child = doc.children;// all children will be selected
+            console.log(child);*/
+
+
+        // These is a method to select sibling
+            /*
+            let doc = document.getElementById("traver3");
+            //let sibling = doc.previousElementSibling;
+            let sibling = doc.nextElementSibling;
+            console.log(sibling);*/
+
+        // Ch 44 change HTML with java script
+            /*
+            let docu = document.getElementById("change");
+            //let content = docu.innerHTML;// get method
+            //console.log(content);
+            docu.innerHTML = "<h1> This is a Heading </h1>"; // set method*/
+            
+        //  CH 45 create and append
+            /*
+            let elm = document.getElementById("change");
+            console.log(elm);
+            let h1 = document.createElement('h1');
+            // let text = document.createTextNode('This is heading.');
+            // h1.appendChild(text);
+            //elm.appendChild(h1);
+
+        // we can also add class or id selector with help of append and create.
+            h1.className = "try";
+            h1.id = "abcd";
+        
+        // we can also append in the HTML 'body'.
+            document.body.appendChild(h1);
+
+        // we can also add text with help of "properties" function
+            h1.textContent = "This is my first class of js." // shortcut to write text in html.
+
+        // we can also read those "properties" function
+            let pra = document.getElementById("p1");
+            console.log(pra);
+
+        // one more example
+            let list1 = document.getElementById("list");
+            let item = document.createElement("li");
+            item.textContent = " hello every one";
+            // let text = document.createTextNode('new list 4');           
+            // item.appendChild(text);
+            list1.appendChild(item);*/
+
+    // ch 46 Insert before an Element
+            /*
+            let list1 = document.getElementById("insert");
+            let li = document.createElement("li");
+            li.textContent = "new list5";
+            let pos = list1.firstElementChild.nextElementSibling.nextElementSibling;
+            insert.insertBefore(li,pos);
+
+        // one more example
+            let parent = document.body;
+            let heading = document.createElement("h2");
+            heading.textContent="This is js tutorial";
+            let ul = document.getElementById("insert");
+            parent.insertBefore(heading,ul)*/
+
+    // ch 47 Remove child Element
+            /*
+            let parent = document.getElementById("menu");
+            let child = parent.firstElementChild.nextElementSibling;
+            parent.removeChild(child);
+
+        // if we have to remove (ul) then we select body
+            // document.body.removeChild(parent);*/
+    
+    //  Ch 48 clone or Copy Element
+            /*
+            let menu = document.getElementById("menu");
+            let clone = menu.cloneNode(true);            
+            document.body.appendChild(clone);
+
+        // if we have to change the 'id' or 'class' in clone function
+            clone.id = "copy";  */
+            
+    // CH 49 Replace Element in JS.
+            /*
+            let parent = document.getElementById("replace");
+            let item = document.createElement("li");
+            item.textContent="About Us";
+            // parent.appendChild(item);
+
+            let child = parent.firstElementChild.nextElementSibling;
+            parent.replaceChild(item, child);*/
+
+    // ch 50 Insert Adjacent HTML
+            let insert = document.getElementById("insert");
+            let html = "<h1> New h1 </h1>";
+            //insert.insertAdjacentHTML("beforebegin", html);
+            // insert.insertAdjacentHTML("afterbegin", html);
+            // insert.insertAdjacentHTML("beforeend", html);
+            insert.insertAdjacentHTML("afterend", html);
+    </script>
+</body> 
+
+
+</html>
