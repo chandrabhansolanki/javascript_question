@@ -1,5 +1,10 @@
 // What is React js?
-// React js is a library of a javascript with help of react we can build user Interfaces and we can also build UI components.
+// React js is a library of a javascript with help of react we can build single page application , resuable components.
+
+// what is single page appication ?
+//  A single-page application is an app that works inside a browser and does not require page reloading during use.
+// 1 SPA is fast, as most resources (HTML+CSS+Scripts) are only loaded once throughout the lifespan of application. Only data is transmitted back and forth.
+// 2 When a user interacts with an SPA, such as clicking a link or submitting a form, the JavaScript framework handles the request and updates the content dynamically.
 
 // What is dom ?
 // When a page is loaded , the browser creates a Document Object Model of the page. Html documents allows javascript to access html elements and style to manipulate them.
