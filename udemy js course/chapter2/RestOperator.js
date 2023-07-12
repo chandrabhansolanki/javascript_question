@@ -10,3 +10,14 @@ function fun(...add) {
 
 const addvalue = fun(1, 2, 3, 4, 5, 6, 7);
 console.log(addvalue);
+
+function multiply(...multi) {
+  let total = 2;
+  for (let i of multi) {
+    total *= i;
+  }
+  return total;
+}
+
+let x = multiply(1, 2, 4, 5);
+console.log(x, "multi");

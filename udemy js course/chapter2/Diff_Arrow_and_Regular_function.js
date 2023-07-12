@@ -62,7 +62,7 @@ function person() {
 
 const userInfo = {
   name: "chandra",
-  fullName: () => {
+  fullName: function() {
     var a = () => {
       console.log(this.name + " " + `Singh`);
     };
