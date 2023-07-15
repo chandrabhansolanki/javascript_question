@@ -54,3 +54,28 @@ const demo = function (country) {
     .then((data) => console.log(data))
     .catch((error) => console.log(error));
 };
+
+// Introduction to the JavaScript promise chaining
+// Sometimes, you want to execute two or more related asynchronous operations, where the next operation starts with the result from the previous step
+
+// let mulit = Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(20);
+//   }, 3000);
+// });
+
+// mulit.then((result) => {
+//   return 2 * result;
+// });
+
+// console.log(multi);
+let p = new Promise((resolve, reject) => {
+  setTimeout(() => {
+      resolve(10);
+  }, 3 * 100);
+});
+
+p.then((result) => {
+  console.log(result);
+  return result * 2;
+});

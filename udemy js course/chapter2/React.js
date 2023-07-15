@@ -45,3 +45,7 @@
 // In react component when the parent's props are changed in that condition whole tree will be rerender.
 
 // but in react pure component when the parent's prop are changed in that condition whole tree will not be rerender. only those component will rerender where props are changing
+
+
+// what is key in map 
+// A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists.
