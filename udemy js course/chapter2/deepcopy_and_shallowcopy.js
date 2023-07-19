@@ -24,14 +24,32 @@ let Student = {
     buiding: "sky Maker",
   },
 };
+/// spread Method 
+let newObj = { ...Student };
+newObj.name = "Ajay";
+newObj.address.buiding = 'Indro ka wase'
 
-// let newObj = { ...Student };
-// newObj.name = "Ajay";
-
-// newObj.address.buiding = 'Indro ka wase'
-
-
-
-let newObj = Student
-newObj.name= 'radhe'
+// let newObj = Student
+// newObj.name= 'radhe'
 console.log(newObj, Student);
+
+
+// object assign
+
+let assign = Object.assign({}, Student);
+
+assign.name = 'goodmorning'
+assign.address.street = " delhi road nagar"
+
+console.log(assign ,Student,'assign');
+
+
+// deep copy method
+
+
+let deepCopy = JSON.parse(JSON.stringify(Student))
+
+deepCopy.name = 'Mohan',
+deepCopy.address.street = 'Mumbai east road'
+
+console.log(deepCopy, Student,'wewe');
