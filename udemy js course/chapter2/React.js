@@ -49,3 +49,16 @@
 
 // what is key in map 
 // A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used in React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists.
+
+// useEffect how we can handle clean up function in useEffect
+
+// In React, the useEffect hook is used to handle side effects in functional components. Side effects can include things like data fetching, subscriptions, manually changing the DOM, or any action that affects the outside world from within a component.
+
+// When you use useEffect, it is essential to clean up after the side effect is done or before the component is unmounted. The reason for this is to avoid memory leaks and unexpected behavior in your application. Here's why cleanup functions are important:
+
+// Preventing memory leaks: If you set up a subscription, timer, or any ongoing process within useEffect without cleaning it up, it may continue to exist even after the component is unmounted. This can lead to memory leaks, as the resources associated with those side effects are not released properly.
+
+// Avoiding stale data and state updates: If you fetch data asynchronously in useEffect and the component is unmounted before the data is received, attempting to update the state or modify the component can lead to errors or unexpected behavior. The cleanup function ensures that the state updates or DOM manipulations do not happen on an unmounted component.
+
+// Unsubscribing from subscriptions: When setting up subscriptions (e.g., WebSocket connections), you need to unsubscribe or close the connection when the component is unmounted. Otherwise, you might receive data updates on a component that is no longer visible or valid.
+
